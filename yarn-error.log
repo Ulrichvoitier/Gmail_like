@@ -1,0 +1,35 @@
+Arguments: 
+  /home/ulrich/.config/nvm/versions/node/v19.6.0/bin/node /usr/share/yarn/bin/yarn.js add @hotwired/stimulus
+
+PATH: 
+  /home/ulrich/.rvm/gems/ruby-3.0.0/bin:/home/ulrich/.rvm/gems/ruby-3.0.0@global/bin:/home/ulrich/.rvm/rubies/ruby-3.0.0/bin:/home/ulrich/.fly/bin:/home/ulrich/.config/nvm/versions/node/v19.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/ulrich/.rvm/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  19.6.0
+
+Platform: 
+  linux arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@hotwired%2fstimulus: ETIMEDOUT
+      at Timeout._onTimeout (/usr/share/yarn/lib/cli.js:141550:19)
+      at listOnTimeout (node:internal/timers:568:17)
+      at process.processTimers (node:internal/timers:511:7)
+
+npm manifest: 
+  {
+    "name": "app",
+    "private": "true",
+    "scripts": {
+      "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

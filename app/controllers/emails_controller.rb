@@ -4,14 +4,16 @@ class EmailsController < ApplicationController
   end
 
   def create
-      @emails = Email.create(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph)
+    @emails = Email.create(object: Faker::Lorem.sentence, body: Faker::Lorem.paragraph)
       # redirect_to emails_path
       
-      # respond_to do |format|
-      #   format.turbo_stream do
-          render turbo_stream: [
-          turbo_stream.prepend('new_email', partial: "message", locals: {emails: @emails})
-          ]
+    render turbo_stream: [
+    turbo_stream.prepend('new_email', partial: "message", locals: {emails: @emails})
+    ]
+  end
+
+  def show
+    @email = Email.find(params[:id])
   end
 
 

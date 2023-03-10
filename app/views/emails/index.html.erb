@@ -10,10 +10,11 @@
 <th scope="col1">N°</th>
 <th scope="col2">Objet</th>
 <th scope="col3">Mails</th>
+
 </tr>
 <ul id="emails-list">
   <% @emails.each do |emails| %>
-  <%=render partial:"message", locals:{emails:emails}%>
+  <%=render partial:"message", locals:{emails:emails} %>
   <% end %>
 </ul>
 
